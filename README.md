@@ -19,7 +19,7 @@ Install Package "keypirinha-wslssh" ??
 
 ### Manually
 
-* Download the `PHPDocSearch.keypirinha-package` from the [releases](https://github.com/irukasano/keypirinha-wslssh/releases/latest).
+* Download the `wslssh.keypirinha-package` from the [releases](https://github.com/irukasano/keypirinha-wslssh/releases/latest).
 * Copy the file into `%APPDATA%\Keypirinha\InstalledPackages` (installed mode) or
   `<Keypirinha_Home>\portable\Profile\InstalledPackages` (portable mode)
 
