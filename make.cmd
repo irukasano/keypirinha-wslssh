@@ -1,7 +1,7 @@
 @echo off
 setlocal
 
-set PACKAGE_NAME=Wslssh
+set PACKAGE_NAME=wslssh
 set INSTALL_DIR=%APPDATA%\Keypirinha\InstalledPackages
 
 if "%1"=="" goto help
@@ -41,6 +41,22 @@ if "%1"=="build" (
 )
 
 if "%1"=="install" (
+    echo TODO: ensure the INSTALL_DIR variable declared at the top of this
+    echo       script complies to your configuration and remove this message
+    exit /1
+
+    copy /Y "%BUILD_DIR%\*.keypirinha-package" "%INSTALL_DIR%\"
+    goto end
+)
+
+if "%1"=="dev" (
+    if not exist "%BUILD_DIR%" mkdir "%BUILD_DIR%"
+    pushd "%~dp0"
+    call "%KEYPIRINHA_SDK%\cmd\kparch" ^
+        "%BUILD_DIR%\%PACKAGE_NAME%.keypirinha-package" ^
+        -r LICENSE* README* src
+    popd
+    
     echo TODO: ensure the INSTALL_DIR variable declared at the top of this
     echo       script complies to your configuration and remove this message
     exit /1

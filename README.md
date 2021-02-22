@@ -1,7 +1,6 @@
-
 # Keypirinha Plugin: wslssh
 
-This is **wslssh**, a plugin for the
+This is wslssh, a plugin for the
 [Keypirinha](http://keypirinha.com) launcher.
 
 Catalog ~/.ssh/config Host names on WSL, and execute ssh on Conemu.
@@ -11,22 +10,26 @@ Catalog ~/.ssh/config Host names on WSL, and execute ssh on Conemu.
 
 https://github.com/irukasano/keypirinha-wslssh/releases
 
-## Installation
 
-### With [PackageControl](https://github.com/ueffel/Keypirinha-PackageControl)
+## Install
 
-Install Package "keypirinha-wslssh" ??
+Once the `wslssh.keypirinha-package` file is installed,
+move it to the `InstalledPackage` folder located at:
 
-### Manually
+* `Keypirinha\portable\Profile\InstalledPackages` in **Portable mode**
+* **Or** `%APPDATA%\Keypirinha\InstalledPackages` in **Installed mode** (the
+  final path would look like
+  `C:\Users\%USERNAME%\AppData\Roaming\Keypirinha\InstalledPackages`)
 
-* Download the `PHPDocSearch.keypirinha-package` from the [releases](https://github.com/irukasano/keypirinha-wslssh/releases/latest).
-* Copy the file into `%APPDATA%\Keypirinha\InstalledPackages` (installed mode) or
-  `<Keypirinha_Home>\portable\Profile\InstalledPackages` (portable mode)
 
 ## Usage
 
 Open Keypirinha and type 'ssh'. Once the suggestion appears press TAB or ENTER to open all suggestions.
 
+
+
 ## License
 
 This package is distributed under the terms of the MIT license.
+
+
