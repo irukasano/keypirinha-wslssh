@@ -5,6 +5,7 @@ This is wslssh, a plugin for the
 
 Catalog ~/.ssh/config Host names on WSL, and execute ssh on Conemu.
 
+![GIF](demo.gif)
 
 ## Download
 
