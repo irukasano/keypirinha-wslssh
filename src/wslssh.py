@@ -15,8 +15,8 @@ class WslSsh(kp.Plugin):
     CONFIG_SECTION_PROFILE = "profile/"
 
     DEFAULT_CONFIG_DEBUG = False
-    DEFAULT_CONFIG_COMMAND_LINE = "c:\\Program Files\\ConEmu\\ConEmu64.exe -run %s -c 'ssh %s'"
-    DEFAULT_CONFIG_ARGS = "-run {} -c 'ssh {}'"
+    DEFAULT_CONFIG_COMMAND_LINE = "c:\\Program Files\\ConEmu\\ConEmu64.exe"
+    DEFAULT_CONFIG_ARGS = " -run {} -c 'ssh {}'"
     DEFAULT_CONFIG_BASH_USER = "admin"
 
     ssh_configs = []
@@ -93,6 +93,7 @@ class WslSsh(kp.Plugin):
     def on_events(self, flags):
         if flags & kp.Events.PACKCONFIG:
             self.get_config()
+            self.get_ssh_config()
 
     def get_ssh_config(self):
         basePath = self.get_wsl_basepath()
