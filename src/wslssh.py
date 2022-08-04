@@ -72,6 +72,10 @@ class WslSsh(kp.Plugin):
             cmd = self.config_command_line
             args = self.config_args.format(
                 conemu_task,
+                server_name,
+                conemu_task,
+                server_name,
+                conemu_task,
                 server_name
             )
             
